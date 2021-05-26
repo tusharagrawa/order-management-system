@@ -1,0 +1,26 @@
+[
+  {
+    "productId": 1,
+    "productName": "Mint",
+    "price": 50.0,
+    "quantity": 20
+  },
+  {
+    "productId": 2,
+    "productName": "TurboTax",
+    "price": 25.3,
+    "quantity": 10
+  },
+  {
+    "productId": 3,
+    "productName": "QuickBooks",
+    "price": 110.57,
+    "quantity": 15
+  },
+  {
+    "productId": 4,
+    "productName": "ProConnect",
+    "price": 75.0,
+    "quantity": 20
+  }
+]
