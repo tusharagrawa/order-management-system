@@ -36,7 +36,7 @@ public class OmsProductService {
     public Mono<Void> addProduct(Mono<Product> product) {
 
         return product
-                .map(productObject -> parseJsonProduct(productObject))
+                .map(this::parseJsonProduct)
                 .flatMap(this::addItemInJson)
                 .onErrorMap(error -> {
                     log.error("Exception while Adding Product to Json FIle: " + error.toString());
@@ -49,7 +49,7 @@ public class OmsProductService {
     @SneakyThrows
     public Flux<Product> getAllProducts() {
         return Flux.fromArray(objectMapper.readValue(new File(productsFilePath), Product[].class))
-                .doOnError(error -> log.error("Exception while reading Products List: " + error.getMessage()))
+                .doOnError(error -> log.error("Exception while reading Products List: " + error.toString()))
                 .subscribeOn(Schedulers.immediate());
     }
 
@@ -58,7 +58,7 @@ public class OmsProductService {
         return getAllProducts()
                 .filter(product -> Objects.equals(product.getProductId(), productId))
                 .single()
-                .doOnError(error -> log.error("Exception while reading Products List: " + error.getMessage()))
+                .doOnError(error -> log.error("Exception while reading Products List: " + error.toString()))
                 .subscribeOn(Schedulers.immediate());
     }
 
