@@ -37,7 +37,7 @@ public class GlobalErrorHandler implements ErrorWebExceptionHandler {
         else {
             serverWebExchange.getResponse().setStatusCode(HttpStatus.INTERNAL_SERVER_ERROR);
             serverWebExchange.getResponse().getHeaders().setContentType(MediaType.TEXT_PLAIN);
-            DataBuffer dataBuffer = bufferFactory.wrap("Unknown error".getBytes());
+            DataBuffer dataBuffer = bufferFactory.wrap("Internal Server Error".getBytes());
             return serverWebExchange.getResponse().writeWith(Mono.just(dataBuffer));
         }
     }
