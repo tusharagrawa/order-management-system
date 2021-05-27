@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "847a05a7-84e1-4770-992e-8bf5c2e54ad1",
+		"name": "Order Management System",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Product APIs",
+			"item": [
+				{
+					"name": "addProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"productId\": 5,\r\n    \"productName\": \"Save Tax\",\r\n    \"price\": 75.0,\r\n    \"quantity\": 20\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/addProduct",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addProduct"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getAllProducts",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getAllProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "retrieve-product-configuration",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/rpc/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"rpc",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-product-configuration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"productId\": 4,\r\n    \"productName\": \"ProConnect 2\",\r\n    \"price\": 75.0,\r\n    \"quantity\": 20\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/upc/4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"upc",
+								"4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order APIs",
+			"item": [
+				{
+					"name": "addOrder",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "  {\r\n    \"orderId\": 9994,\r\n    \"customerId\": 4567,\r\n    \"productId\": 1,\r\n    \"productPrice\": 25,\r\n    \"productQuantity\": 10\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/addOrder",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"addOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getAllOrders",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getAllOrders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCustomerOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/getAllOrders/4567",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"getAllOrders",
+								"4567"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Customer APIs",
+			"item": []
+		}
+	]
+}
