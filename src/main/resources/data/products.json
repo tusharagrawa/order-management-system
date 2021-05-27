@@ -1,1 +1,32 @@
-[{"quantity":20,"productId":1,"price":50.0,"productName":"Mint"},{"quantity":10,"productId":2,"price":25.3,"productName":"TurboTax"},{"quantity":15,"productId":3,"price":110.57,"productName":"QuickBooks"},{"quantity":20,"productId":4,"price":75.0,"productName":"ProConnect 2"},{"quantity":20,"productId":5,"price":75.0,"productName":"Save Tax"}]
+[
+  {
+    "quantity": 20,
+    "productId": 1,
+    "price": 50.0,
+    "productName": "Mint"
+  },
+  {
+    "quantity": 10,
+    "productId": 2,
+    "price": 25.3,
+    "productName": "TurboTax"
+  },
+  {
+    "quantity": 15,
+    "productId": 3,
+    "price": 110.57,
+    "productName": "QuickBooks"
+  },
+  {
+    "quantity": 20,
+    "productId": 4,
+    "price": 75.0,
+    "productName": "ProConnect 2"
+  },
+  {
+    "quantity": 20,
+    "productId": 5,
+    "price": 75.0,
+    "productName": "Save Tax"
+  }
+]
