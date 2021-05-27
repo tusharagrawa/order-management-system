@@ -21,18 +21,21 @@ public class OmsProductRouter {
     private String getAllProductsUrl;
 
     @Value("${retrieve-product-configuration-uri}")
-    private String retrieveProductConfiguration;
+    private String retrieveProductConfigurationUrl;
 
     @Value("${update-product-configuration-uri}")
-    private String updateProductConfiguration;
+    private String updateProductConfigurationUrl;
 
+    @Value("${add-product-uri}")
+    private String addProductUrl;
 
     @Bean
     public RouterFunction<ServerResponse> routerFunction() {
         return RouterFunctions.route()
+                .POST(addProductUrl, omsProductHandler::addProduct)
                 .GET(getAllProductsUrl, omsProductHandler::getAllProducts)
-                .GET(retrieveProductConfiguration, omsProductHandler::retrieveProductConfiguration)
-                .POST(updateProductConfiguration, omsProductHandler::updateProductConfiguration)
+                .GET(retrieveProductConfigurationUrl, omsProductHandler::retrieveProductConfiguration)
+                .POST(updateProductConfigurationUrl, omsProductHandler::updateProductConfiguration)
                 .build();
     }
 }
